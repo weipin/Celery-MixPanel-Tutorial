@@ -66,8 +66,8 @@ celery worker -l info --concurrency=100 --pool=eventlet
 Notes:
 
 - The worker process is started using the celery worker manage command for convenience. To run the worker as a daemon, please see the section "Running worker as daemon" below.
-- We specifies Eventlet as the execution pool implementation (`--pool=eventlet`). In the cases that networking is the only thing a task do, Eventlet can be used to efficiently spawn hundreds of green threads.
-- We specifies the number of concurrent worker as 100 (`--concurrency=100`).
+- We specify Eventlet as the execution pool implementation (`--pool=eventlet`). In the cases that networking is the only work a task do, Eventlet can be used to efficiently spawn hundreds of green threads.
+- We specify the number of concurrent worker as 100 (`--concurrency=100`).
 - `celery` will find the default config file `celeryconfig.py` and then the task in `tasks.py`.
 
 
